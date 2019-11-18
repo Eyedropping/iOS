@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1570115488617" ID="ID_499666182" MODIFIED="1570117973330" TEXT="Classes and Structures">
+<node CREATED="1570115488617" ID="ID_499666182" MODIFIED="1573214034867" TEXT="Classes and Structures">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -10,7 +10,8 @@
       as .md files in iOS git (check if it is still private)
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1570115498314" ID="ID_819735893" MODIFIED="1570115499836" POSITION="right" TEXT="Init">
 <node CREATED="1570115570247" ID="ID_421948381" MODIFIED="1570115573266" TEXT="Types of init">
 <node CREATED="1570115500374" ID="ID_49395851" MODIFIED="1570115503842" TEXT="Convenience"/>
@@ -43,8 +44,7 @@
       <span style="float: none; text-decoration: none; font-weight: normal; word-spacing: 0px; text-indent: 0px; text-align: start; font-style: normal; font-size: 16.80000114440918px; color: rgb(37, 37, 37); white-space: normal; text-transform: none; display: inline !important; letter-spacing: normal; background-color: rgb(255, 255, 255); font-family: sans-serif"><font color="rgb(37, 37, 37)" size="16.80000114440918px" face="sans-serif">https://www.techotopia.com/index.php/An_Introduction_to_Swift_Subclassing_and_Extension</font></span>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1570295318057" ID="ID_1314883575" MODIFIED="1570459283743" TEXT="Stored">
@@ -108,8 +108,7 @@
       </div>
     </div>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="button_ok"/>
 <node CREATED="1570115543769" ID="ID_1388704860" MODIFIED="1570459283695" TEXT="Getter">
 <richcontent TYPE="NOTE"><html>
@@ -163,8 +162,7 @@
       Overriding, in&#160;OOP, is a language feature that allows a&#160;subclass&#160;or child class to provide a specific implementation of a&#160;(variable?) and method&#160;that is already provided by one of its&#160;superclasses&#160;or parent classes.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
