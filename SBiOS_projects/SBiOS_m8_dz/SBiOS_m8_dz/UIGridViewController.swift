@@ -18,20 +18,37 @@ class UIGridViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var x = 25, y = 100, width = 100, height = 100, xAxis = 0, yAxis = 0
+        var x = 25, y = 100, width = 100, height = 100, xAxis = 0, yAxis = 0, labelNo = 1
         var bgColor = UIColor.systemPink
         var alpha: CGFloat = 0.8
+        
+        func createLabel(x: Int, y: Int, width: Int, height: Int) {
+            let frame = CGRect(x: x + 100, y: y + 100, width: width, height: height)
+            let label = UILabel(frame: frame)
+            label.center = CGPoint(x: x + width / 2, y: x + height / 2)
+            label.textAlignment = NSTextAlignment.center
+            label.text = "Label #\(labelNo)"
+            self.view.addSubview(label)
+        }
         
         func createSubView(x: Int, y: Int, width: Int, height: Int) {
             let frame = CGRect(x: x, y: y, width: width, height: height)
             let subView = UIView(frame:frame)
             subView.backgroundColor = bgColor
             subView.alpha = alpha
+            self.view.addSubview(subView)
         }
         
-        while yAxis <= 2 {
-            while xAxis <= 2 {
+        while yAxis <= 1 {
+            y += 130
+            x = 0
+            xAxis = 0
+            yAxis += 1
+            while xAxis <= 1 {
                 createSubView(x: x, y: y, width: width, height: height)
+                createLabel(x: x, y: y, width: width, height: height)
+                xAxis += 1
+                x += 130
             }
         }
         
@@ -70,4 +87,8 @@ class UIGridViewController: UIViewController {
         //        }
     }
     
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(true)
+    //        createSubView(x: x, y: y, width: width, height: height)
+    //    }
 }
