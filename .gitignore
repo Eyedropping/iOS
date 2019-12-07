@@ -84,3 +84,4 @@ iOSInjectionProject/
 # macOS
 .DS_Store
 *contents.xcplayground
+.*.icloud
