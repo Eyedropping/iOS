@@ -1,2 +1,0 @@
-# iOS
- Everything on iOS
