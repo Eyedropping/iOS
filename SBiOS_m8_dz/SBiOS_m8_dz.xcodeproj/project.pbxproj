@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5CE0CA23A4406900A3DC79 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5CE0C923A4406900A3DC79 /* SegmentedViewController.swift */; };
 		FB64AB4E2395744E00F0C7E7 /* UIGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB64AB4D2395744E00F0C7E7 /* UIGridViewController.swift */; };
 		FB8082C623947AF500BDB351 /* spiral_galaxy_4-wallpaper-2880x1800.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB8082C523947AF500BDB351 /* spiral_galaxy_4-wallpaper-2880x1800.jpg */; };
 		FB861A0B23906C6D00B52CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB861A0A23906C6D00B52CB4 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F5CE0C923A4406900A3DC79 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		FB64AB4D2395744E00F0C7E7 /* UIGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGridViewController.swift; sourceTree = "<group>"; };
 		FB8082C523947AF500BDB351 /* spiral_galaxy_4-wallpaper-2880x1800.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spiral_galaxy_4-wallpaper-2880x1800.jpg"; sourceTree = "<group>"; };
 		FB861A0723906C6D00B52CB4 /* SBiOS_m8_dz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBiOS_m8_dz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				FB861A0E23906C6D00B52CB4 /* ViewController.swift */,
 				FB64AB4D2395744E00F0C7E7 /* UIGridViewController.swift */,
 				FB861A1023906C6D00B52CB4 /* Main.storyboard */,
+				3F5CE0C923A4406900A3DC79 /* SegmentedViewController.swift */,
 				FB861A1323906C7F00B52CB4 /* Assets.xcassets */,
 				FB861A3223906F5C00B52CB4 /* images */,
 				FB861A1523906C7F00B52CB4 /* LaunchScreen.storyboard */,
@@ -191,6 +194,7 @@
 			files = (
 				FB64AB4E2395744E00F0C7E7 /* UIGridViewController.swift in Sources */,
 				FB861A0F23906C6D00B52CB4 /* ViewController.swift in Sources */,
+				3F5CE0CA23A4406900A3DC79 /* SegmentedViewController.swift in Sources */,
 				FB861A0B23906C6D00B52CB4 /* AppDelegate.swift in Sources */,
 				FB861A0D23906C6D00B52CB4 /* SceneDelegate.swift in Sources */,
 			);
