@@ -13,6 +13,8 @@ class GetWeather {
     
     //MARK: - method for getting weather for today
     
+//    let tableVC = ForecastViewController()
+    
     func getCurrenMowWeather(completion: @escaping ((WeatherTodayMoscow?, Bool)) -> Void) {
         let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?id=524901&APPID=b3d57a41f87619daf456bfefa990fce4&units=metric")!
         let request = URLRequest(url: url)
@@ -53,24 +55,6 @@ class GetWeather {
             }
         }
         task.resume()
-    }
-    
-    func getForecastWithAlamo(completion: @escaping ((WeatherForecast?, Bool)) -> Void) {
-        Alamofire.request("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=b3d57a41f87619daf456bfefa990fce4&units=metric").responseJSON {
-            response in
-            if let objects = response.result.value {
-                do {
-                    let json = try JSONDecoder().decode(WeatherForecast.self, from: objects as! Data)
-                    print(json)
-                    completion((json, true))
-                } catch {
-                    print(error)
-                    completion((nil, false))
-                }
-            } else {
-                print("error")
-            }
-        }
     }
 }
 

@@ -14,18 +14,40 @@ class ForecastViewController: UITableViewController {
     
     let weatherGetter = GetWeather()
     
-    var tableData: WeatherForecast?
+    var tableData = [List]()
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tableData?.list.count ?? 0
+        return self.tableData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableVCCell
-        //        cell.dayLabel = tableData?.list
-        cell.dateLabel.text = "\(self.tableData?.list[indexPath.row].dt)"
-        cell.tempLabel.text = "\(self.tableData?.list[indexPath.row].main.temp)"
-        cell.feelsLikeLabel.text = "\(self.tableData?.list[indexPath.row].main.feels_like)"
+        let weatherData = self.tableData[indexPath.row]
+        let time = Double(weatherData.dt)
+        
+        func unixTimeConvertion(unixTime: Double) -> String {
+            let time = NSDate(timeIntervalSince1970: unixTime)
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = NSLocale(localeIdentifier: NSLocale.system.identifier) as Locale?
+            dateFormatter.dateFormat = "hh:mm a"
+            let dateAsString = dateFormatter.string(from: time as Date)
+            dateFormatter.dateFormat = "h:mm a"
+            let date = dateFormatter.date(from: dateAsString)
+            dateFormatter.dateFormat = "HH: mm"
+            let date24 = dateFormatter.string(from: date!)
+            
+            return date24
+        }
+        
+        cell.dateLabel.text = unixTimeConvertion(unixTime: time)
+        
+//        if let timeResult = (time as? Double) {
+//            let date = Date(timeIntervalSince1970: timeResult)
+//            cell.dateLabel.text = "\(date)"
+//            print(date)
+//        }
+        cell.tempLabel.text = "\(weatherData.main.temp)"
+        cell.feelsLikeLabel.text = "\(weatherData.main.feels_like)"
         return cell
     }
     
@@ -37,16 +59,15 @@ class ForecastViewController: UITableViewController {
         
         weatherGetter.getMowForecast { (data, status) in
             if let data = data, status {
+                self.tableData = data.list
+                DispatchQueue.main.async {
+                    self.tableV.reloadData()
+                }
             } else if status {
                 print("-------- Ошибка разбора данных прогноза погоды --------")
             } else {
                 print("-------- Ошибка получения данных прогноза погоды --------")
             }
-            self.tableData = data
         }
-        
-        print(self.tableData?.list.count) // отдает нил - надо вернуть из функции - запнулся на этом
-        
-//        self.tableData = weatherGetter.getMowForecast(completion: ((tableData, true))) // ошибка - Cannot convert value of type '(WeatherForecast?, Bool)' to expected argument type '((WeatherForecast?, Bool)) -> Void'
     }
 }
