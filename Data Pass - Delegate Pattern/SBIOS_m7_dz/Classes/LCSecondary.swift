@@ -9,9 +9,8 @@
 import UIKit
 
 class LCSecondary: UIViewController {
-    
     public var dataToBePassed: String?
-    
+
     @IBAction func colorSelector(_ sender: UIButton) {
         switch sender.tag {
         case 0:
@@ -24,8 +23,8 @@ class LCSecondary: UIViewController {
             break
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         switch segue.identifier {
         case "unwindRed":
             dataToBePassed = "Red Chosen"
@@ -36,15 +35,9 @@ class LCSecondary: UIViewController {
         default:
             break
         }
-        
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
-    
-    
 }

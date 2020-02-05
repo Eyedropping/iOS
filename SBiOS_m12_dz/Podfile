@@ -1,0 +1,4 @@
+target 'SBiOS_m12_dz' do
+  use_frameworks!
+  pod 'Alamofire'
+end

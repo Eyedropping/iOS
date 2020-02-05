@@ -12,10 +12,9 @@ protocol SecondaryDelegate {
     func sendData(data: UIColor)
 }
 
-class EmbeddedSecondary: UIViewController    {
-    
+class EmbeddedSecondary: UIViewController {
     var delegate: SecondaryDelegate?
-    
+
     @IBAction func colorPicker(_ sender: UIButton) {
         switch sender.tag {
         case 0:
@@ -31,12 +30,8 @@ class EmbeddedSecondary: UIViewController    {
             break
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
 }
-
-

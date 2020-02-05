@@ -9,24 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
-    @IBOutlet weak var firstOperand: UITextField!
-    
-    @IBOutlet weak var mathAction: UITextField!
-    
-    @IBOutlet weak var secondOperand: UITextField!
-    
-    @IBAction func calculate(_ sender: Any) {
+    @IBOutlet var firstOperand: UITextField!
+
+    @IBOutlet var mathAction: UITextField!
+
+    @IBOutlet var secondOperand: UITextField!
+
+    @IBAction func calculate(_: Any) {
         let a: Int? = Int(firstOperand.text!)
         let b: Int? = Int(secondOperand.text!)
         let action = mathAction.text!
         var res: Int = 0
-        
+
         if a == nil || b == nil {
             result.text = "Invalid input"
-        }
-        else {
+        } else {
             switch action {
             case "+":
                 res = a! + b!
@@ -45,16 +42,11 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    @IBOutlet weak var result: UILabel!
-    
-    
-    
+
+    @IBOutlet var result: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    
 }
-

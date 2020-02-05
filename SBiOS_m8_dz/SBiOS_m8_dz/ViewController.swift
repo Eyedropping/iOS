@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     let images: [String] = [
         "13597685_1224449080939233_1667780838_n.jpg",
         "milky_way_galaxy_2-wallpaper-2560x1440.jpg",
@@ -19,26 +18,25 @@ class ViewController: UIViewController {
         "24125526_322142304859750_2525012334175322112_n.jpg",
         "35506987_268988417178706_474661742396309504_n.jpg",
         "galaxy_explosion-wallpaper-1920x1080.jpg",
-        "spiral_galaxy_4-wallpaper-2880x1800.jpg"
+        "spiral_galaxy_4-wallpaper-2880x1800.jpg",
     ]
-    
+
     var currentIndex = 0
-    
-    @IBOutlet weak var mainImageView: UIImageView!
-    
-    @IBAction func backwardButton(_ sender: Any) {
-        self.currentIndex = (self.currentIndex <= 0) ? 0 : self.currentIndex - 1
-        self.mainImageView.image = UIImage(named: images[currentIndex])
+
+    @IBOutlet var mainImageView: UIImageView!
+
+    @IBAction func backwardButton(_: Any) {
+        currentIndex = (currentIndex <= 0) ? 0 : currentIndex - 1
+        mainImageView.image = UIImage(named: images[currentIndex])
     }
-    
-    @IBAction func forwardButton(_ sender: Any) {
-        self.currentIndex = (self.currentIndex >= self.images.count - 1) ? self.images.count - 1 : self.currentIndex + 1
-        self.mainImageView.image = UIImage(named: images[currentIndex])
+
+    @IBAction func forwardButton(_: Any) {
+        currentIndex = (currentIndex >= images.count - 1) ? images.count - 1 : currentIndex + 1
+        mainImageView.image = UIImage(named: images[currentIndex])
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         mainImageView.image = UIImage(named: images[currentIndex])
     }
 }
-

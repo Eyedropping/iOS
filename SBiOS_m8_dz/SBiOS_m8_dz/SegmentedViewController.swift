@@ -9,18 +9,17 @@
 import UIKit
 
 class SegmentedViewController: UIViewController {
-    
     var segmentedControl = UISegmentedControl()
     var segmentedeControlArray = ["Green", "Blue", "Violet"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.segmentedControl = UISegmentedControl(items: self.segmentedeControlArray)
-        self.segmentedControl.frame = CGRect(x: 100, y: 100, width: 200, height: 30)
-        self.view.addSubview(self.segmentedControl)
-        self.segmentedControl.addTarget(self, action: #selector(segmentPicker), for: .valueChanged)
+        segmentedControl = UISegmentedControl(items: segmentedeControlArray)
+        segmentedControl.frame = CGRect(x: 100, y: 100, width: 200, height: 30)
+        view.addSubview(segmentedControl)
+        segmentedControl.addTarget(self, action: #selector(segmentPicker), for: .valueChanged)
     }
-    
+
     @objc func segmentPicker(target: UISegmentedControl) {
         switch target.selectedSegmentIndex {
         case 0:
@@ -29,13 +28,13 @@ class SegmentedViewController: UIViewController {
             greenView.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
             greenView.layer.cornerRadius = 5
             greenView.layer.borderWidth = 0.25
-            let sampleTextField1 =  UITextField(frame: CGRect(x: 20, y: 20, width: 300, height: 40))
-            let sampleTextField2 =  UITextField(frame: CGRect(x: 20, y: 80, width: 300, height: 40))
+            let sampleTextField1 = UITextField(frame: CGRect(x: 20, y: 20, width: 300, height: 40))
+            let sampleTextField2 = UITextField(frame: CGRect(x: 20, y: 80, width: 300, height: 40))
             sampleTextField1.placeholder = "Hello Hi Nihao"
             sampleTextField2.placeholder = "Hola Salut Ahoy"
             greenView.addSubview(sampleTextField1)
             greenView.addSubview(sampleTextField2)
-            self.view.addSubview(greenView)
+            view.addSubview(greenView)
         case 1:
             let blueView = UIView()
             blueView.frame = CGRect(x: 100, y: 200, width: 200, height: 300)
@@ -48,7 +47,7 @@ class SegmentedViewController: UIViewController {
             blueView.layer.borderWidth = 0.25
             blueView.addSubview(sampleButton1)
             blueView.addSubview(sampleButton2)
-            self.view.addSubview(blueView)
+            view.addSubview(blueView)
         case 2:
             let violetView = UIView()
             violetView.frame = CGRect(x: 100, y: 200, width: 200, height: 300)
@@ -64,7 +63,7 @@ class SegmentedViewController: UIViewController {
             sampleImageView2.contentMode = scaling
             violetView.addSubview(sampleImageView1)
             violetView.addSubview(sampleImageView2)
-            self.view.addSubview(violetView)
+            view.addSubview(violetView)
         default:
             break
         }

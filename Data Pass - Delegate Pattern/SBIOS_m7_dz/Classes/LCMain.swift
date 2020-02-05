@@ -9,29 +9,27 @@
 import UIKit
 
 class LCMain: UIViewController {
-
     var dataToBereceived: String?
-    
-    @IBOutlet weak var lcMainLabel: UILabel!
-    
+
+    @IBOutlet var lcMainLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func unwindFromLCSecondary(_ sender: UIStoryboardSegue) {
         if sender.source is LCSecondary {
             if let senderVC = sender.source as? LCSecondary {
                 dataToBereceived = senderVC.dataToBePassed
             }
         }
-        
+
         lcMainLabel.text = dataToBereceived
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         if segue.identifier == "ShowSecondary" {
             _ = segue.destination as! LCSecondary
         }
     }
-    
 }

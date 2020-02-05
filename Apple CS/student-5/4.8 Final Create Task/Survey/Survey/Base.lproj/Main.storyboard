@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Text-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" userLabel="Simple Text" customClass="SimpleTextViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-Pb-Qou">
+                                <rect key="frame" x="153.5" y="74" width="107.5" height="137"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0O-qh-eOV">
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFs-O8-Wcx">
+                                        <rect key="frame" x="0.0" y="116.5" width="107.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nS5-Pb-Qou" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="30" id="ac2-bP-tFC"/>
+                            <constraint firstItem="nS5-Pb-Qou" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="dGN-LZ-vAp"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nS5-Pb-Qou" secondAttribute="bottom" constant="180" id="dxZ-rL-SRb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Summary" image="Text" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="otherTextLabel" destination="kFs-O8-Wcx" id="KDt-PO-BWG"/>
+                        <outlet property="summaryLabel" destination="N0O-qh-eOV" id="hZ0-ab-yaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="453"/>
+        </scene>
+        <!--Plot-->
+        <scene sceneID="qRf-dk-IwK">
+            <objects>
+                <viewController id="dOM-c9-vaN" userLabel="Plot" customClass="PlotViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sjt-i0-2J4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00k-kX-MiA" customClass="PlotView" customModule="Survey" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="254.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="00k-kX-MiA" secondAttribute="height" multiplier="1.5:1" id="pV7-uR-pfI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqr-gf-59o" customClass="ChartKeyView" customModule="Survey" customModuleProvider="target">
+                                <rect key="frame" x="16" y="306.5" width="382" height="506.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eqr-gf-59o" firstAttribute="leading" secondItem="Olw-Hu-VCL" secondAttribute="leading" constant="16" id="3hK-G5-2Vy"/>
+                            <constraint firstItem="Olw-Hu-VCL" firstAttribute="trailing" secondItem="00k-kX-MiA" secondAttribute="trailing" constant="16" id="3rV-WN-bFP"/>
+                            <constraint firstItem="00k-kX-MiA" firstAttribute="leading" secondItem="Olw-Hu-VCL" secondAttribute="leading" constant="16" id="Kte-pB-kgB"/>
+                            <constraint firstItem="eqr-gf-59o" firstAttribute="top" secondItem="00k-kX-MiA" secondAttribute="bottom" constant="8" id="Vyq-cN-AB1"/>
+                            <constraint firstItem="00k-kX-MiA" firstAttribute="top" secondItem="Olw-Hu-VCL" secondAttribute="top" id="eIg-4W-Kk4"/>
+                            <constraint firstItem="Olw-Hu-VCL" firstAttribute="trailing" secondItem="eqr-gf-59o" secondAttribute="trailing" constant="16" id="lOP-s2-Hmi"/>
+                            <constraint firstItem="Olw-Hu-VCL" firstAttribute="bottom" secondItem="eqr-gf-59o" secondAttribute="bottom" placeholder="YES" id="yhb-YB-8Yg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Olw-Hu-VCL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Plot" image="Plot" id="cX3-mQ-nNC"/>
+                    <connections>
+                        <outlet property="keyView" destination="eqr-gf-59o" id="bTD-US-vAb"/>
+                        <outlet property="plotView" destination="00k-kX-MiA" id="5pa-QN-cBB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTl-b4-8p9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429.5999999999999" y="364.7676161919041"/>
+        </scene>
+        <!--Pie Chart-->
+        <scene sceneID="oFM-W3-rvy">
+            <objects>
+                <viewController id="rLF-F8-S48" userLabel="Pie Chart" customClass="PieChartViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fL5-bS-TDX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQ7-lN-bwW" customClass="PieChartView" customModule="Survey" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="382"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dQ7-lN-bwW" secondAttribute="height" multiplier="1:1" id="lmK-4Y-5sh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yix-r7-uro" customClass="ChartKeyView" customModule="Survey" customModuleProvider="target">
+                                <rect key="frame" x="16" y="434" width="382" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yix-r7-uro" firstAttribute="leading" secondItem="sbS-Si-WPz" secondAttribute="leading" constant="16" id="5Cd-bF-Z7t"/>
+                            <constraint firstItem="sbS-Si-WPz" firstAttribute="trailing" secondItem="dQ7-lN-bwW" secondAttribute="trailing" constant="16" id="838-cN-b3e"/>
+                            <constraint firstItem="sbS-Si-WPz" firstAttribute="trailing" secondItem="Yix-r7-uro" secondAttribute="trailing" constant="16" id="R9O-l7-EOX"/>
+                            <constraint firstItem="dQ7-lN-bwW" firstAttribute="leading" secondItem="sbS-Si-WPz" secondAttribute="leading" constant="16" id="TSF-HL-wHG"/>
+                            <constraint firstItem="dQ7-lN-bwW" firstAttribute="top" secondItem="sbS-Si-WPz" secondAttribute="top" id="XJi-vw-Hck"/>
+                            <constraint firstItem="sbS-Si-WPz" firstAttribute="bottom" secondItem="Yix-r7-uro" secondAttribute="bottom" placeholder="YES" id="ddb-8K-KF4"/>
+                            <constraint firstItem="Yix-r7-uro" firstAttribute="top" secondItem="dQ7-lN-bwW" secondAttribute="bottom" constant="8" id="eMN-4r-YCn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sbS-Si-WPz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pie" image="Pie" id="5cr-w7-qne"/>
+                    <connections>
+                        <outlet property="keyView" destination="Yix-r7-uro" id="MUm-BF-5nj"/>
+                        <outlet property="pieChartView" destination="dQ7-lN-bwW" id="f45-hn-H0r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Pp-iT-zgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="-332"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="c47-xd-KOd" kind="relationship" relationship="viewControllers" id="Eh3-He-Lk2"/>
+                        <segue destination="rLF-F8-S48" kind="relationship" relationship="viewControllers" id="HBI-eb-Kxu"/>
+                        <segue destination="BUT-5g-GGL" kind="relationship" relationship="viewControllers" id="X65-dd-8pY"/>
+                        <segue destination="dOM-c9-vaN" kind="relationship" relationship="viewControllers" id="qxS-vR-bGU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="zCy-zR-1x4">
+            <objects>
+                <tableViewController storyboardIdentifier="MoodRecordSummaryViewController" id="c47-xd-KOd" userLabel="List" customClass="ListViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RSK-v2-B3e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zgS-e1-TgE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zgS-e1-TgE" id="Uma-ix-91I">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c47-xd-KOd" id="w0m-j2-tq0"/>
+                            <outlet property="delegate" destination="c47-xd-KOd" id="m8V-36-fRi"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="List" image="List" id="dnR-D3-OVe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmL-ed-9zQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-410"/>
+        </scene>
+        <!--Bar Chart-->
+        <scene sceneID="O94-ED-u3u">
+            <objects>
+                <viewController id="BUT-5g-GGL" userLabel="Bar Chart" customClass="BarChartViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1FL-Wg-nrs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9D-Gb-hru" userLabel="Bar View" customClass="BarChartView" customModule="Survey" customModuleProvider="target">
+                                <rect key="frame" x="16" y="44" width="382" height="382"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x9D-Gb-hru" secondAttribute="height" multiplier="1:1" id="UPl-Ao-4H7"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROG-e8-vw3" customClass="ChartKeyView" customModule="Survey" customModuleProvider="target">
+                                <rect key="frame" x="16" y="434" width="382" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P8o-rn-e5z" firstAttribute="trailing" secondItem="ROG-e8-vw3" secondAttribute="trailing" constant="16" id="2ds-oQ-fcY"/>
+                            <constraint firstItem="ROG-e8-vw3" firstAttribute="top" secondItem="x9D-Gb-hru" secondAttribute="bottom" constant="8" id="A5K-gL-clM"/>
+                            <constraint firstItem="P8o-rn-e5z" firstAttribute="trailing" secondItem="x9D-Gb-hru" secondAttribute="trailing" constant="16" id="MCp-5Q-3tS"/>
+                            <constraint firstItem="x9D-Gb-hru" firstAttribute="top" secondItem="P8o-rn-e5z" secondAttribute="top" id="VBO-MK-Suw"/>
+                            <constraint firstItem="P8o-rn-e5z" firstAttribute="bottom" secondItem="ROG-e8-vw3" secondAttribute="bottom" placeholder="YES" id="cOG-8a-kyB"/>
+                            <constraint firstItem="x9D-Gb-hru" firstAttribute="leading" secondItem="P8o-rn-e5z" secondAttribute="leading" constant="16" id="l03-tl-7JG"/>
+                            <constraint firstItem="ROG-e8-vw3" firstAttribute="leading" secondItem="P8o-rn-e5z" secondAttribute="leading" constant="16" id="pzr-5y-rK3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8o-rn-e5z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bar" image="Bar" id="x3h-xD-gvG"/>
+                    <connections>
+                        <outlet property="barChartView" destination="x9D-Gb-hru" id="f7k-nL-2ce"/>
+                        <outlet property="keyView" destination="ROG-e8-vw3" id="6sY-eb-EOe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBf-ui-hnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2164" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bar" width="23" height="23"/>
+        <image name="List" width="23" height="23"/>
+        <image name="Pie" width="23" height="23"/>
+        <image name="Plot" width="23" height="23"/>
+        <image name="Text" width="23" height="23"/>
+    </resources>
+</document>

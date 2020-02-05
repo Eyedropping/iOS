@@ -10,14 +10,12 @@ import UIKit
 
 class EmbeddedMain: UIViewController, SecondaryDelegate {
     func sendData(data: UIColor) {
-        self.view.backgroundColor = data
+        view.backgroundColor = data
     }
-    
-    
-    
+
     private var contentVC: EmbeddedSecondary?
-    
-    @IBAction func pickColor (_ sender: UIButton) {
+
+    @IBAction func pickColor(_ sender: UIButton) {
         switch sender.tag {
         case 0:
             contentVC?.view.backgroundColor = .green
@@ -29,17 +27,16 @@ class EmbeddedMain: UIViewController, SecondaryDelegate {
             break
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
         let vc: EmbeddedSecondary = segue.destination as! EmbeddedSecondary
         if segue.identifier == "Segue2emb" {
             vc.delegate = self
-            self.contentVC = vc
+            contentVC = vc
         }
-        
     }
 }
