@@ -45,6 +45,8 @@ class ForecastViewController: UITableViewController {
             self.tableData = data
         }
         
-        print(self.tableData?.list.count)
+        print(self.tableData?.list.count) // отдает нил - надо вернуть из функции - запнулся на этом
+        
+        self.tableData = weatherGetter.getMowForecast(completion: ((tableData, true))) // ошибка - Cannot convert value of type '(WeatherForecast?, Bool)' to expected argument type '((WeatherForecast?, Bool)) -> Void'
     }
 }
