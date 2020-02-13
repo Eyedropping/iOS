@@ -23,31 +23,30 @@ class ForecastViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableVCCell
         let weatherData = self.tableData[indexPath.row]
-        let time = Double(weatherData.dt)
         
-        func unixTimeConvertion(unixTime: Double) -> String {
-            let time = NSDate(timeIntervalSince1970: unixTime)
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = NSLocale(localeIdentifier: NSLocale.system.identifier) as Locale?
-            dateFormatter.dateFormat = "hh:mm a"
-            let dateAsString = dateFormatter.string(from: time as Date)
-            dateFormatter.dateFormat = "h:mm a"
-            let date = dateFormatter.date(from: dateAsString)
-            dateFormatter.dateFormat = "HH: mm"
-            let date24 = dateFormatter.string(from: date!)
-            
-            return date24
-        }
+        let unixTime = Double(weatherData.dt)
         
-        cell.dateLabel.text = unixTimeConvertion(unixTime: time)
+        let date = Date(timeIntervalSince1970: unixTime)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.setLocalizedDateFormatFromTemplate("MMMd")
+        dateFormatter.string(from: date)
+        cell.dateLabel.text = "\(dateFormatter.string(from: date))"
+        cell.dateLabel.textAlignment = .center
         
-//        if let timeResult = (time as? Double) {
-//            let date = Date(timeIntervalSince1970: timeResult)
-//            cell.dateLabel.text = "\(date)"
-//            print(date)
-//        }
-        cell.tempLabel.text = "\(weatherData.main.temp)"
-        cell.feelsLikeLabel.text = "\(weatherData.main.feels_like)"
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        dateFormatter.setLocalizedDateFormatFromTemplate("HH:mm")
+        let time = dateFormatter.string(from: date)
+        cell.timeLabel.text = time
+        
+        
+        print(cell.dateLabel.text!)
+        cell.tempLabel.text = "\(Int(weatherData.main.temp))"
+        cell.feelsLikeLabel.text = "\(Int(weatherData.main.feels_like))"
         return cell
     }
     
@@ -69,5 +68,6 @@ class ForecastViewController: UITableViewController {
                 print("-------- Ошибка получения данных прогноза погоды --------")
             }
         }
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

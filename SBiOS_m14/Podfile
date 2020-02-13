@@ -1,0 +1,6 @@
+target 'SBiOS_m14' do
+  use_frameworks!
+  pod 'Alamofire'
+  pod 'SVProgressHUD'
+  pod 'RealmSwift'
+end

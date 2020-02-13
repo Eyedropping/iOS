@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SBiOS_m13_dz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nBB-wv-8ws">
+                                <rect key="frame" x="87" y="132" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nBB-wv-8ws" secondAttribute="height" multiplier="1:1" id="XkT-5C-0yT"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHl-R4-WIr">
+                                <rect key="frame" x="44" y="768" width="327" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsk-w1-c7y">
+                                        <rect key="frame" x="8" y="34" width="81" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                        <state key="normal" title="Previous">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousAnimationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6r-V6-mLJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEJ-Sg-ZC0">
+                                        <rect key="frame" x="273" y="34" width="45.5" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45.5" id="gRb-kK-HvT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextAnimationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yuF-bk-s1x"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rk-mb-ZXV">
+                                        <rect key="frame" x="157" y="40" width="13" height="29"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="OEJ-Sg-ZC0" firstAttribute="top" secondItem="hHl-R4-WIr" secondAttribute="top" constant="34" id="Czy-Jz-d7d"/>
+                                    <constraint firstAttribute="trailing" secondItem="OEJ-Sg-ZC0" secondAttribute="trailing" constant="8.5" id="LTV-Ve-ypG"/>
+                                    <constraint firstItem="0rk-mb-ZXV" firstAttribute="leading" secondItem="Rsk-w1-c7y" secondAttribute="trailing" constant="68" id="btY-iF-50A"/>
+                                    <constraint firstItem="OEJ-Sg-ZC0" firstAttribute="baseline" secondItem="Rsk-w1-c7y" secondAttribute="baseline" id="iiS-s4-zoz"/>
+                                    <constraint firstItem="OEJ-Sg-ZC0" firstAttribute="leading" secondItem="0rk-mb-ZXV" secondAttribute="trailing" constant="103" id="u4e-La-h3V"/>
+                                    <constraint firstItem="OEJ-Sg-ZC0" firstAttribute="baseline" secondItem="0rk-mb-ZXV" secondAttribute="baseline" id="vkC-bP-Xge"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nBB-wv-8ws" secondAttribute="trailing" constant="87" id="0Si-RP-yes"/>
+                            <constraint firstItem="hHl-R4-WIr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="768" id="1zt-2t-Erq"/>
+                            <constraint firstAttribute="bottom" secondItem="hHl-R4-WIr" secondAttribute="bottom" constant="20" symbolic="YES" id="3ve-pJ-Nfx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hHl-R4-WIr" secondAttribute="trailing" constant="43" id="Kt4-6l-MMl"/>
+                            <constraint firstItem="nBB-wv-8ws" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="136" id="VzS-Qo-bql"/>
+                            <constraint firstItem="nBB-wv-8ws" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="lgx-4g-C0D"/>
+                            <constraint firstItem="hHl-R4-WIr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="qDR-Q8-Qdl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationNumberLabel" destination="0rk-mb-ZXV" id="8Yf-ic-cqo"/>
+                        <outlet property="squareView" destination="nBB-wv-8ws" id="6I6-sI-H0E"/>
+                        <outlet property="squareViewAspectRatioConstraint" destination="XkT-5C-0yT" id="dPf-Kh-bu7"/>
+                        <outlet property="squareViewLeadingConstraint" destination="lgx-4g-C0D" id="74Y-h6-eFZ"/>
+                        <outlet property="squareViewTopConstraint" destination="VzS-Qo-bql" id="BIh-Qc-rIm"/>
+                        <outlet property="squareViewTrailingConstraint" destination="0Si-RP-yes" id="tSn-jA-VDx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

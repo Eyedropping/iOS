@@ -1,0 +1,6 @@
+framework module Pods_Relm_test {
+  umbrella header "Pods-Relm_test-umbrella.h"
+
+  export *
+  module * { export * }
+}
