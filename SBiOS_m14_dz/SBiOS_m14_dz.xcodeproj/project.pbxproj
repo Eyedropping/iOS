@@ -17,10 +17,14 @@
 		3FB2280C23F202920073A552 /* UserDefaulsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2280B23F202920073A552 /* UserDefaulsViewController.swift */; };
 		3FB2280E23F202A30073A552 /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2280D23F202A30073A552 /* RealmViewController.swift */; };
 		3FB2281023F202A80073A552 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2280F23F202A80073A552 /* CoreDataViewController.swift */; };
-		3FB2281223F202F00073A552 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2281123F202F00073A552 /* RealmData.swift */; };
+		3FB2281223F202F00073A552 /* PersistentDataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2281123F202F00073A552 /* PersistentDataRealm.swift */; };
+		3FB2281423F5D9970073A552 /* PersistentDataUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2281323F5D9970073A552 /* PersistentDataUD.swift */; };
+		9AB503584BAA59C5DC042E43 /* Pods_SBiOS_m14_dz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C6AB01DA2AECD18E9058D5 /* Pods_SBiOS_m14_dz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		076694833FAA8507F2649580 /* Pods-SBiOS_m14_dz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBiOS_m14_dz.release.xcconfig"; path = "Target Support Files/Pods-SBiOS_m14_dz/Pods-SBiOS_m14_dz.release.xcconfig"; sourceTree = "<group>"; };
+		1C3AC2C062EB2421C37C39B3 /* Pods-SBiOS_m14_dz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBiOS_m14_dz.debug.xcconfig"; path = "Target Support Files/Pods-SBiOS_m14_dz/Pods-SBiOS_m14_dz.debug.xcconfig"; sourceTree = "<group>"; };
 		3FB227F123F201B60073A552 /* SBiOS_m14_dz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBiOS_m14_dz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB227F423F201B60073A552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB227F623F201B60073A552 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +37,9 @@
 		3FB2280B23F202920073A552 /* UserDefaulsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaulsViewController.swift; sourceTree = "<group>"; };
 		3FB2280D23F202A30073A552 /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
 		3FB2280F23F202A80073A552 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
-		3FB2281123F202F00073A552 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		3FB2281123F202F00073A552 /* PersistentDataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataRealm.swift; sourceTree = "<group>"; };
+		3FB2281323F5D9970073A552 /* PersistentDataUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentDataUD.swift; sourceTree = "<group>"; };
+		A0C6AB01DA2AECD18E9058D5 /* Pods_SBiOS_m14_dz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SBiOS_m14_dz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB503584BAA59C5DC042E43 /* Pods_SBiOS_m14_dz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F84B02923F746B500D291C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FB2281323F5D9970073A552 /* PersistentDataUD.swift */,
+				3FB2281123F202F00073A552 /* PersistentDataRealm.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F84B02A23F746C900D291C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FB227F823F201B60073A552 /* ViewController.swift */,
+				3FB2280B23F202920073A552 /* UserDefaulsViewController.swift */,
+				3FB2280D23F202A30073A552 /* RealmViewController.swift */,
+				3FB2280F23F202A80073A552 /* CoreDataViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3FB227E823F201B60073A552 = {
 			isa = PBXGroup;
 			children = (
 				3FB227F323F201B60073A552 /* SBiOS_m14_dz */,
 				3FB227F223F201B60073A552 /* Products */,
+				F0470021981E538E9686F470 /* Pods */,
+				926D3CC23792105FF3E53AF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,11 +97,8 @@
 			children = (
 				3FB227F423F201B60073A552 /* AppDelegate.swift */,
 				3FB227F623F201B60073A552 /* SceneDelegate.swift */,
-				3FB227F823F201B60073A552 /* ViewController.swift */,
-				3FB2280B23F202920073A552 /* UserDefaulsViewController.swift */,
-				3FB2280D23F202A30073A552 /* RealmViewController.swift */,
-				3FB2280F23F202A80073A552 /* CoreDataViewController.swift */,
-				3FB2281123F202F00073A552 /* RealmData.swift */,
+				3F84B02A23F746C900D291C9 /* Controller */,
+				3F84B02923F746B500D291C9 /* Model */,
 				3FB227FA23F201B60073A552 /* Main.storyboard */,
 				3FB2280023F201B70073A552 /* Assets.xcassets */,
 				3FB2280223F201B70073A552 /* LaunchScreen.storyboard */,
@@ -82,6 +108,24 @@
 			path = SBiOS_m14_dz;
 			sourceTree = "<group>";
 		};
+		926D3CC23792105FF3E53AF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0C6AB01DA2AECD18E9058D5 /* Pods_SBiOS_m14_dz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0470021981E538E9686F470 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C3AC2C062EB2421C37C39B3 /* Pods-SBiOS_m14_dz.debug.xcconfig */,
+				076694833FAA8507F2649580 /* Pods-SBiOS_m14_dz.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FB2280823F201B70073A552 /* Build configuration list for PBXNativeTarget "SBiOS_m14_dz" */;
 			buildPhases = (
+				89988B7E196DBAFBD897C5C7 /* [CP] Check Pods Manifest.lock */,
 				3FB227ED23F201B60073A552 /* Sources */,
 				3FB227EE23F201B60073A552 /* Frameworks */,
 				3FB227EF23F201B60073A552 /* Resources */,
+				7D65CEF1A069226E184A75D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +194,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7D65CEF1A069226E184A75D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SBiOS_m14_dz/Pods-SBiOS_m14_dz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SBiOS_m14_dz/Pods-SBiOS_m14_dz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SBiOS_m14_dz/Pods-SBiOS_m14_dz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89988B7E196DBAFBD897C5C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SBiOS_m14_dz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3FB227ED23F201B60073A552 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -156,9 +244,10 @@
 				3FB2280E23F202A30073A552 /* RealmViewController.swift in Sources */,
 				3FB227F923F201B60073A552 /* ViewController.swift in Sources */,
 				3FB227F523F201B60073A552 /* AppDelegate.swift in Sources */,
+				3FB2281423F5D9970073A552 /* PersistentDataUD.swift in Sources */,
 				3FB2281023F202A80073A552 /* CoreDataViewController.swift in Sources */,
 				3FB227F723F201B60073A552 /* SceneDelegate.swift in Sources */,
-				3FB2281223F202F00073A552 /* RealmData.swift in Sources */,
+				3FB2281223F202F00073A552 /* PersistentDataRealm.swift in Sources */,
 				3FB2280C23F202920073A552 /* UserDefaulsViewController.swift in Sources */,
 				3FB227FF23F201B60073A552 /* SBiOS_m14_dz.xcdatamodeld in Sources */,
 			);
@@ -302,6 +391,7 @@
 		};
 		3FB2280923F201B70073A552 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3AC2C062EB2421C37C39B3 /* Pods-SBiOS_m14_dz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +409,7 @@
 		};
 		3FB2280A23F201B70073A552 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 076694833FAA8507F2649580 /* Pods-SBiOS_m14_dz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
