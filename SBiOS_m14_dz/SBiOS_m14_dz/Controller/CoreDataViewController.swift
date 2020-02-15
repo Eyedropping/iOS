@@ -1,5 +1,5 @@
 //
-//  CoreDataViewController.swift
+//  ViewController.swift
 //  SBiOS_m14_dz
 //
 //  Created by Dmitry Aksyonov on 11.02.2020.
@@ -7,24 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
-class CoreDataViewController: ViewController {
-
+class ViewController: UIViewController {
+    
+    var container: NSPersistentContainer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        guard container != nil else {
+//            fatalError("This view needs a persistent container.")
+//        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
