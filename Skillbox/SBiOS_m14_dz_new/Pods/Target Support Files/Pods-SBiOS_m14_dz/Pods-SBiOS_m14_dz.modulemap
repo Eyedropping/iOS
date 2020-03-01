@@ -1,0 +1,6 @@
+framework module Pods_SBiOS_m14_dz {
+  umbrella header "Pods-SBiOS_m14_dz-umbrella.h"
+
+  export *
+  module * { export * }
+}
