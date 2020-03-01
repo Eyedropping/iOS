@@ -1,5 +1,0 @@
-target 'Relm_test' do
-  use_frameworks!
-  pod 'RealmSwift'
-end
-

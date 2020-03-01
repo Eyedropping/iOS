@@ -1,5 +1,0 @@
-target 'SBiOS_m14_dz' do
-  use_frameworks!
-  pod 'RealmSwift'
-end
-
