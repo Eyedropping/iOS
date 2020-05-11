@@ -35,7 +35,7 @@ class InsertViewController: UIViewController {
             try! realm.write {
                 realm.add(toDo)
             }
-        }
+        }		
         navigationController?.popViewController(animated: true)
     }
     
